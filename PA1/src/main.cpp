@@ -8,7 +8,6 @@
 #include <cstring>
 #include <iostream>
 #include <fstream>
-#include "../lib/tm_usage.h"
 #include "sort_tool.h"
 
 using namespace std;
@@ -46,7 +45,6 @@ int main(int argc, char* argv[])
                              // data[1] will be the second data and so on.
     
     //////////// the sorting part ////////////////
-    tmusg.periodStart();
     SortTool NTUSortTool; 
 
     if(!strcmp(argv[1],"-QS")) {
@@ -65,10 +63,6 @@ int main(int argc, char* argv[])
         help_message();
         return 0;
     }
-
-    tmusg.getPeriodUsage(stat);
-    cout <<"The total CPU time: " << (stat.uTime + stat.sTime) / 1000.0 << "ms" << endl;
-    cout <<"memory: " << stat.vmPeak << "KB" << endl; // print peak memory
 
     //////////// write the output file ///////////
     fout << "# " << data.size() << " data points" <<endl;
