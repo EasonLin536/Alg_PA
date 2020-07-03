@@ -1,5 +1,5 @@
 # Alg_PA
-2019_fall Algorithm programming assignments
+2019 Fall Algorithm programming assignments, NTUEE
 
 PA1 : insertion_sort, quick_sort, merge_sort, and heap_sort
 
